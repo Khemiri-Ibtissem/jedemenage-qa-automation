@@ -1,0 +1,15 @@
+# Dependencies and generated files
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.e2e/
+__pycache__/
+.pytest_cache/
+
+# Secrets: never commit
+.env
+
+# Office lock files
+~$*

@@ -1,0 +1,14 @@
+# Dépendances (réinstallées avec npm install)
+node_modules/
+
+# Réglages locaux
+.env
+
+# Base de données de test (recréée à chaque lancement)
+.e2e/
+
+# Résultats générés par Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

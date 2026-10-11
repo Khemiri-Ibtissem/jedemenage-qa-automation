@@ -1,0 +1,33 @@
+{
+  "name": "jedemenage-tests-auto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests automatisés Playwright de JeDemenage (CT-01 à CT-08)",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:securite": "playwright test --grep @securite",
+    "test:ct01": "playwright test tests/CT-01_Page-accueil",
+    "test:ct02": "playwright test tests/CT-02_Inscription",
+    "test:ct03": "playwright test tests/CT-03_Connexion",
+    "test:ct04": "playwright test tests/CT-04_Demande-demenagement",
+    "test:ct05": "playwright test tests/CT-05_Offres",
+    "test:ct06": "playwright test tests/CT-06_Suivi-cloture-evaluation",
+    "test:ct07": "playwright test tests/CT-07_Controle-acces",
+    "test:ct08": "playwright test tests/CT-08_Administration",
+    "test:mobile": "playwright test --project=mobile",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:lent": "cross-env LENTEUR=1000 playwright test --headed",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen http://127.0.0.1:8010",
+    "verifier": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.0"
+  }
+}
